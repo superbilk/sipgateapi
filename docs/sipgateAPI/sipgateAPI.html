@@ -1,0 +1,1488 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class sipgateAPI</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> sipgateAPI</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+											<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+						
+			</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Implements the samurai functionality for PHP programers. So you don't have to mess around with XML-RPC<br />  Requires &quot;XML-RPC for PHP&quot; (http://phpxmlrpc.sourceforge.net)</p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Christian Schmidt</li>
+				<li><span class="field">version:</span> 0.5</li>
+				<li><span class="field">todo:</span> decode all dateTime responses from Server</li>
+				<li><span class="field">todo:</span> implemet all samurai methods</li>
+				<li><span class="field">todo:</span> better documentation</li>
+				<li><span class="field">todo:</span> better error handling</li>
+				<li><span class="field">todo:</span> dynamic TOS array</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_sipgateAPI.php.html">/sipgateAPI.php</a> (line <span class="field">41</span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+	<a name="sec-const-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Class Constant Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Constants</span> (<a href="#sec-consts">details</a>)
+												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<div class="const-summary">
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#ClientName" title="details" class="const-name">ClientName</a> = 					<span class="var-type"> 'sipgateAPI with PHP'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#ClientVendor" title="details" class="const-name">ClientVendor</a> = 					<span class="var-type"> 'Christian Schmidt'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#ClientVersion" title="details" class="const-name">ClientVersion</a> = 					<span class="var-type"> 0.5</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#debug" title="details" class="const-name">debug</a> = 					<span class="var-type"> FALSE</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#host" title="details" class="const-name">host</a> = 					<span class="var-type"> 'samurai.sipgate.net'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#port" title="details" class="const-name">port</a> = 					<span class="var-type"> '443'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#prot" title="details" class="const-name">prot</a> = 					<span class="var-type"> 'https'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#RPC_path" title="details" class="const-name">RPC_path</a> = 					<span class="var-type"> '/RPC2'</span>
+
+				</div>
+							</div>
+		</div>
+	</div>
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+															<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$supportedMethods" title="details" class="var-name">$supportedMethods</a>
+				</div>
+																<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$supportedTOS" title="details" class="var-name">$supportedTOS</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																																																																																																																																																																								<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#click2dial" title="details" class="method-name">click2dial</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$caller</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$callee</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">bool</span>
+										<a href="#methodSupported" title="details" class="method-name">methodSupported</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$MethodName</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Constructor.png" alt=" "/>
+											<span class="method-result">sipgateAPI</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$username</span> = <span class="var-default">NULL</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$password</span> = <span class="var-default">NULL</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$debug</span> = <span class="var-default">NULL</span>])
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#samurai_AccountStatementGet" title="details" class="method-name">samurai_AccountStatementGet</a>
+											(<span class="var-type">unix_timestamp</span>&nbsp;<span class="var-name">$PeriodStart</span>, <span class="var-type">unix_timestamp</span>&nbsp;<span class="var-name">$PeriodEnd</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#samurai_BalanceGet" title="details" class="method-name">samurai_BalanceGet</a>
+											(<span class="var-type">void</span>&nbsp;<span class="var-name">0</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#samurai_ClientIdentify" title="details" class="method-name">samurai_ClientIdentify</a>
+											([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$ClientVersion</span> = <span class="var-default">self::ClientVersion</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$ClientName</span> = <span class="var-default">self::ClientName</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$ClientVendor</span> = <span class="var-default">self::ClientVendor</span>])
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#samurai_HistoryGetByDate" title="details" class="method-name">samurai_HistoryGetByDate</a>
+											([<span class="var-type">array</span>&nbsp;<span class="var-name">$LocalUriList</span> = <span class="var-default">NULL</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$StatusList</span> = <span class="var-default">NULL</span>], [<span class="var-type">unix_timestamp</span>&nbsp;<span class="var-name">$PeriodStart</span> = <span class="var-default">NULL</span>], [<span class="var-type">unix_timestamp</span>&nbsp;<span class="var-name">$PeriodEnd</span> = <span class="var-default">NULL</span>], <span class="var-type">array</span>&nbsp;<span class="var-name">$StatsuList</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#samurai_ItemizedEntriesGet" title="details" class="method-name">samurai_ItemizedEntriesGet</a>
+											(<span class="var-type">array,|void</span>&nbsp;<span class="var-name">$LocalUriList</span>, <span class="var-type">unix_timestamp</span>&nbsp;<span class="var-name">$PeriodStart</span>, <span class="var-type">unix_timestamp</span>&nbsp;<span class="var-name">$PeriodEnd</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#samurai_OwnUriListGet" title="details" class="method-name">samurai_OwnUriListGet</a>
+											(<span class="var-type">void</span>&nbsp;<span class="var-name">0</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#samurai_PhonebookEntryGet" title="details" class="method-name">samurai_PhonebookEntryGet</a>
+										()
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#samurai_PhonebookListGet" title="details" class="method-name">samurai_PhonebookListGet</a>
+										()
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#samurai_RecommendedIntervalGet" title="details" class="method-name">samurai_RecommendedIntervalGet</a>
+										()
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#samurai_ServerdataGet" title="details" class="method-name">samurai_ServerdataGet</a>
+											(<span class="var-type">void</span>&nbsp;<span class="var-name">0</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#samurai_SessionClose" title="details" class="method-name">samurai_SessionClose</a>
+										()
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#samurai_SessionInitiate" title="details" class="method-name">samurai_SessionInitiate</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$LocalUri</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$RemoteUri</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$TOS</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$Content</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$Schedule</span> = <span class="var-default">NULL</span>], <span class="var-type">dateTime</span>&nbsp;<span class="var-name">$schedule</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#samurai_SessionInitiateMulti" title="details" class="method-name">samurai_SessionInitiateMulti</a>
+										()
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#samurai_SessionStatusGet" title="details" class="method-name">samurai_SessionStatusGet</a>
+										()
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#samurai_TosListGet" title="details" class="method-name">samurai_TosListGet</a>
+											(<span class="var-type">void</span>&nbsp;<span class="var-name">0</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#samurai_UmSummaryGet" title="details" class="method-name">samurai_UmSummaryGet</a>
+										()
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#samurai_UserdataGreetingGet" title="details" class="method-name">samurai_UserdataGreetingGet</a>
+										()
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#sendFAX" title="details" class="method-name">sendFAX</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$to</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$file</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$time</span> = <span class="var-default">NULL</span>])
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#sendSMS" title="details" class="method-name">sendSMS</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$to</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$text</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$time</span> = <span class="var-default">NULL</span>])
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">bool</span>
+										<a href="#setClient" title="details" class="method-name">setClient</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$username</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$password</span>, [<span class="var-type">bool</span>&nbsp;<span class="var-name">$debug</span> = <span class="var-default">this::debug</span>])
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#system_listMethods" title="details" class="method-name">system_listMethods</a>
+										()
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#system_methodHelp" title="details" class="method-name">system_methodHelp</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$MethodName</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#system_methodSignature" title="details" class="method-name">system_methodSignature</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$MethodName</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#system_serverInfo" title="details" class="method-name">system_serverInfo</a>
+										()
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">bool</span>
+										<a href="#tosSupported" title="details" class="method-name">tosSupported</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$TOS</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#xmlrpcArray" title="details" class="method-name">xmlrpcArray</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">&$array</span>)
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+												<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+<a name="var$supportedMethods" id="$supportedMethods"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$supportedMethods</span>
+			 = <span class="var-default"> NULL</span>			(line <span class="line-number">55</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$supportedTOS" id="$supportedTOS"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$supportedTOS</span>
+			 = <span class="var-default"> NULL</span>			(line <span class="line-number">54</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+														<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodclick2dial" id="click2dial"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">click2dial</span> (line <span class="line-number">747</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Click2Dial</p>
+<p class="description"><p>Call this method to initiate a phone call! First your phone rings, when you answere, the callees phone rings.  You can use it for a callback service at your homepage</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> SessionID, if available</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			click2dial
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$caller</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$callee</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$caller</span><span class="var-description">: your phone number, like 492111234567</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$callee</span><span class="var-description">: other persons phone number, like 492111234567</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodmethodSupported" id="methodSupported"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">methodSupported</span> (line <span class="line-number">939</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Checks if method is supported</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			methodSupported
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$MethodName</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$MethodName</span><span class="var-description">: CAUTION: uses internal method name. Example: system_ServerInfo NOT: system.serverInfo</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Constructor.png" />
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number">73</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Checks if XML-RPC for PHP is included</p>
+	<ul class="tags">
+				<li><span class="field">throws:</span> sipgateAPI_Exception when XML-RPC for PHP is not available</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">sipgateAPI</span>
+		<span class="method-name">
+			__construct
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$username</span> = <span class="var-default">NULL</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$password</span> = <span class="var-default">NULL</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$debug</span> = <span class="var-default">NULL</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$username</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$password</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$debug</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsamurai_AccountStatementGet" id="samurai_AccountStatementGet"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">samurai_AccountStatementGet</span> (line <span class="line-number">100</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">implements <em>samurai.AccountStatementGet</em></p>
+	<ul class="tags">
+				<li><span class="field">throws:</span> sipgateAPI_Server_Exception on Server responses != 200 OK</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			samurai_AccountStatementGet
+		</span>
+					(<span class="var-type">unix_timestamp</span>&nbsp;<span class="var-name">$PeriodStart</span>, <span class="var-type">unix_timestamp</span>&nbsp;<span class="var-name">$PeriodEnd</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">unix_timestamp</span>
+				<span class="var-name">$PeriodStart</span>			</li>
+					<li>
+				<span class="var-type">unix_timestamp</span>
+				<span class="var-name">$PeriodEnd</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsamurai_BalanceGet" id="samurai_BalanceGet"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">samurai_BalanceGet</span> (line <span class="line-number">141</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">implements <em>samurai.BalanceGet</em></p>
+	<ul class="tags">
+				<li><span class="field">throws:</span> sipgateAPI_Server_Exception on Server responses != 200 OK</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			samurai_BalanceGet
+		</span>
+					(<span class="var-type">void</span>&nbsp;<span class="var-name">0</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">void</span>
+				<span class="var-name">0</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsamurai_ClientIdentify" id="samurai_ClientIdentify"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">samurai_ClientIdentify</span> (line <span class="line-number">176</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">implements <em>samurai.ClientIdentify</em></p>
+<p class="description"><p>Usefull for support requests and debug</p></p>
+	<ul class="tags">
+				<li><span class="field">throws:</span> sipgateAPI_Server_Exception on Server responses != 200 OK</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			samurai_ClientIdentify
+		</span>
+					([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$ClientVersion</span> = <span class="var-default">self::ClientVersion</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$ClientName</span> = <span class="var-default">self::ClientName</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$ClientVendor</span> = <span class="var-default">self::ClientVendor</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$ClientVersion</span><span class="var-description">: Clientinformation</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$ClientName</span><span class="var-description">: Clientinformation</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$ClientVendor</span><span class="var-description">: Clientinformation</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsamurai_HistoryGetByDate" id="samurai_HistoryGetByDate"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">samurai_HistoryGetByDate</span> (line <span class="line-number">223</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">implements <em>samurai.HistoryGetByDate</em></p>
+	<ul class="tags">
+				<li><span class="field">throws:</span> sipgateAPI_Server_Exception on Server responses != 200 OK</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			samurai_HistoryGetByDate
+		</span>
+					([<span class="var-type">array</span>&nbsp;<span class="var-name">$LocalUriList</span> = <span class="var-default">NULL</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$StatusList</span> = <span class="var-default">NULL</span>], [<span class="var-type">unix_timestamp</span>&nbsp;<span class="var-name">$PeriodStart</span> = <span class="var-default">NULL</span>], [<span class="var-type">unix_timestamp</span>&nbsp;<span class="var-name">$PeriodEnd</span> = <span class="var-default">NULL</span>], <span class="var-type">array</span>&nbsp;<span class="var-name">$StatsuList</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$LocalUriList</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$StatsuList</span>			</li>
+					<li>
+				<span class="var-type">unix_timestamp</span>
+				<span class="var-name">$PeriodStart</span>			</li>
+					<li>
+				<span class="var-type">unix_timestamp</span>
+				<span class="var-name">$PeriodEnd</span><span class="var-description">: @PeriodEnd</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$StatusList</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsamurai_ItemizedEntriesGet" id="samurai_ItemizedEntriesGet"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">samurai_ItemizedEntriesGet</span> (line <span class="line-number">300</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">implements <em>samurai.ItemizedEntriesGet</em></p>
+	<ul class="tags">
+				<li><span class="field">throws:</span> sipgateAPI_Server_Exception on Server responses != 200 OK</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			samurai_ItemizedEntriesGet
+		</span>
+					(<span class="var-type">array,|void</span>&nbsp;<span class="var-name">$LocalUriList</span>, <span class="var-type">unix_timestamp</span>&nbsp;<span class="var-name">$PeriodStart</span>, <span class="var-type">unix_timestamp</span>&nbsp;<span class="var-name">$PeriodEnd</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array,|void</span>
+				<span class="var-name">$LocalUriList</span><span class="var-description">: can be empty or an array of URI</span>			</li>
+					<li>
+				<span class="var-type">unix_timestamp</span>
+				<span class="var-name">$PeriodStart</span>			</li>
+					<li>
+				<span class="var-type">unix_timestamp</span>
+				<span class="var-name">$PeriodEnd</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsamurai_OwnUriListGet" id="samurai_OwnUriListGet"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">samurai_OwnUriListGet</span> (line <span class="line-number">367</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">implements <em>samurai.OwnUriListGet</em></p>
+	<ul class="tags">
+				<li><span class="field">throws:</span> sipgateAPI_Server_Exception on Server responses != 200 OK</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			samurai_OwnUriListGet
+		</span>
+					(<span class="var-type">void</span>&nbsp;<span class="var-name">0</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">void</span>
+				<span class="var-name">0</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsamurai_PhonebookEntryGet" id="samurai_PhonebookEntryGet"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">samurai_PhonebookEntryGet</span> (line <span class="line-number">401</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">implements <em>samurai.PhonebookEntryGet</em></p>
+<p class="description"><p>Not supported in this Version</p></p>
+	<ul class="tags">
+				<li><span class="field">throws:</span> sipgateAPI_Server_Exception on Server responses != 200 OK</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			samurai_PhonebookEntryGet
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodsamurai_PhonebookListGet" id="samurai_PhonebookListGet"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">samurai_PhonebookListGet</span> (line <span class="line-number">420</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">implements <em>samurai.PhonebookListGet</em></p>
+<p class="description"><p>Not supported in this Version</p></p>
+	<ul class="tags">
+				<li><span class="field">throws:</span> sipgateAPI_Server_Exception on Server responses != 200 OK</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			samurai_PhonebookListGet
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodsamurai_RecommendedIntervalGet" id="samurai_RecommendedIntervalGet"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">samurai_RecommendedIntervalGet</span> (line <span class="line-number">454</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">implements <em>samurai.RecommendedIntervalGet</em></p>
+<p class="description"><p>Not supported in this Version</p></p>
+	<ul class="tags">
+				<li><span class="field">throws:</span> sipgateAPI_Server_Exception on Server responses != 200 OK</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			samurai_RecommendedIntervalGet
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodsamurai_ServerdataGet" id="samurai_ServerdataGet"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">samurai_ServerdataGet</span> (line <span class="line-number">476</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">implements <em>samurai.ServerdataGet</em></p>
+	<ul class="tags">
+				<li><span class="field">throws:</span> sipgateAPI_Server_Exception on Server responses != 200 OK</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			samurai_ServerdataGet
+		</span>
+					(<span class="var-type">void</span>&nbsp;<span class="var-name">0</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">void</span>
+				<span class="var-name">0</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsamurai_SessionClose" id="samurai_SessionClose"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">samurai_SessionClose</span> (line <span class="line-number">511</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">implements <em>samurai.SessionClose</em></p>
+<p class="description"><p>Not supported in this Version</p></p>
+	<ul class="tags">
+				<li><span class="field">throws:</span> sipgateAPI_Server_Exception on Server responses != 200 OK</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			samurai_SessionClose
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodsamurai_SessionInitiate" id="samurai_SessionInitiate"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">samurai_SessionInitiate</span> (line <span class="line-number">538</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">implements <em>samurai.SessionInitiate</em></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> SessionID, if available</li>
+				<li><span class="field">throws:</span> sipgateAPI_Server_Exception on Server responses != 200 OK</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			samurai_SessionInitiate
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$LocalUri</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$RemoteUri</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$TOS</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$Content</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$Schedule</span> = <span class="var-default">NULL</span>], <span class="var-type">dateTime</span>&nbsp;<span class="var-name">$schedule</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$LocalUri</span><span class="var-description">: as SIP-URI</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$RemoteUri</span><span class="var-description">: as SIP-URI</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$TOS</span><span class="var-description">: Type of service as defined in $availableTOS</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$Content</span><span class="var-description">: depends on TOS</span>			</li>
+					<li>
+				<span class="var-type">dateTime</span>
+				<span class="var-name">$schedule</span><span class="var-description">: as unix timestamp</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$Schedule</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsamurai_SessionInitiateMulti" id="samurai_SessionInitiateMulti"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">samurai_SessionInitiateMulti</span> (line <span class="line-number">603</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">implements <em>samurai.SessionInitiateMulti</em></p>
+<p class="description"><p>Not supported in this Version</p></p>
+	<ul class="tags">
+				<li><span class="field">throws:</span> sipgateAPI_Server_Exception on Server responses != 200 OK</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			samurai_SessionInitiateMulti
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodsamurai_SessionStatusGet" id="samurai_SessionStatusGet"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">samurai_SessionStatusGet</span> (line <span class="line-number">622</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">implements <em>samurai.SessionStatusGet</em></p>
+<p class="description"><p>Not supported in this Version</p></p>
+	<ul class="tags">
+				<li><span class="field">throws:</span> sipgateAPI_Server_Exception on Server responses != 200 OK</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			samurai_SessionStatusGet
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodsamurai_TosListGet" id="samurai_TosListGet"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">samurai_TosListGet</span> (line <span class="line-number">641</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">implements <em>samurai.TosListGet</em></p>
+	<ul class="tags">
+				<li><span class="field">throws:</span> sipgateAPI_Server_Exception on Server responses != 200 OK</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			samurai_TosListGet
+		</span>
+					(<span class="var-type">void</span>&nbsp;<span class="var-name">0</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">void</span>
+				<span class="var-name">0</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsamurai_UmSummaryGet" id="samurai_UmSummaryGet"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">samurai_UmSummaryGet</span> (line <span class="line-number">676</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">implements <em>samurai.UmSummaryGet</em></p>
+<p class="description"><p>Not supported in this Version</p></p>
+	<ul class="tags">
+				<li><span class="field">throws:</span> sipgateAPI_Server_Exception on Server responses != 200 OK</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			samurai_UmSummaryGet
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodsamurai_UserdataGreetingGet" id="samurai_UserdataGreetingGet"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">samurai_UserdataGreetingGet</span> (line <span class="line-number">694</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">implements <em>samurai.UserdataGreetingGet</em></p>
+<p class="description"><p>Not supported in this Version</p></p>
+	<ul class="tags">
+				<li><span class="field">throws:</span> sipgateAPI_Server_Exception on Server responses != 200 OK</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			samurai_UserdataGreetingGet
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodsendFAX" id="sendFAX"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">sendFAX</span> (line <span class="line-number">793</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">sending a PDF file as fax</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Returns SessionID</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			sendFAX
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$to</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$file</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$time</span> = <span class="var-default">NULL</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$to</span><span class="var-description">: fax number, example: 492111234567</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$file</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$time</span><span class="var-description">: unix timestamp in UTC</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsendSMS" id="sendSMS"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">sendSMS</span> (line <span class="line-number">772</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">sending SMS</p>
+<p class="description"><p>Sending a text message to a (mobile) phone. Message will be cut off after 160 characters</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			sendSMS
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$to</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$text</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$time</span> = <span class="var-default">NULL</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$to</span><span class="var-description">: mobile number, example: 491701234567</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$text</span><span class="var-description">: cut off after 160 chars</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$time</span><span class="var-description">: unix timestamp in UTC</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetClient" id="setClient"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setClient</span> (line <span class="line-number">719</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">configures a URI to connect to XML-RPC server</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> always true</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			setClient
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$username</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$password</span>, [<span class="var-type">bool</span>&nbsp;<span class="var-name">$debug</span> = <span class="var-default">this::debug</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$username</span><span class="var-description">: Your sipgate username - the one you use on the website, NOT your SIP-ID</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$password</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$debug</span><span class="var-description">: enable debug information</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsystem_listMethods" id="system_listMethods"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">system_listMethods</span> (line <span class="line-number">823</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">implements <em>system.listMethods</em></p>
+<p class="description"><p>Lists all supported methods from samurai</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			system_listMethods
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodsystem_methodHelp" id="system_methodHelp"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">system_methodHelp</span> (line <span class="line-number">850</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">implements <em>system.methodHelp</em></p>
+<p class="description"><p>Get more information about a method</p></p>
+	<ul class="tags">
+				<li><span class="field">throws:</span> sipgateAPI_Server_Exception on Server responses != 200 OK</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			system_methodHelp
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$MethodName</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$MethodName</span><span class="var-description">: original name. Example: system.ServerInfo NOT: system_serverInfo</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsystem_methodSignature" id="system_methodSignature"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">system_methodSignature</span> (line <span class="line-number">881</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">implements <em>system.methodSignature</em></p>
+	<ul class="tags">
+				<li><span class="field">throws:</span> sipgateAPI_Server_Exception on Server responses != 200 OK</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			system_methodSignature
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$MethodName</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$MethodName</span><span class="var-description">: original name. Example: system.ServerInfo NOT: system_serverInfo</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsystem_serverInfo" id="system_serverInfo"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">system_serverInfo</span> (line <span class="line-number">912</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">implements <em>system.serverInfo</em></p>
+	<ul class="tags">
+				<li><span class="field">throws:</span> sipgateAPI_Server_Exception on Server responses != 200 OK</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			system_serverInfo
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodtosSupported" id="tosSupported"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">tosSupported</span> (line <span class="line-number">960</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Checks if TOS is supported</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			tosSupported
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$TOS</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$TOS</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodxmlrpcArray" id="xmlrpcArray"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">xmlrpcArray</span> (line <span class="line-number">983</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">transform an array to an xmlrpc-array</p>
+<p class="description"><p>all values become a xmlrpcval-object</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> with values as xmlrpc objects</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			xmlrpcArray
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">&$array</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">&$array</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+	<a name="sec-consts"></a>
+	<div class="info-box">
+		<div class="info-box-title">Class Constants</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Constants</a> (<span class="disabled">details</span>)
+						
+			
+												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+														| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="constClientName" id="ClientName"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">ClientName</span>
+			 = <span class="const-default"> 'sipgateAPI with PHP'</span>
+			(line <span class="line-number">44</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constClientVendor" id="ClientVendor"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">ClientVendor</span>
+			 = <span class="const-default"> 'Christian Schmidt'</span>
+			(line <span class="line-number">45</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constClientVersion" id="ClientVersion"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">ClientVersion</span>
+			 = <span class="const-default"> 0.5</span>
+			(line <span class="line-number">43</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constdebug" id="debug"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">debug</span>
+			 = <span class="const-default"> FALSE</span>
+			(line <span class="line-number">47</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="consthost" id="host"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">host</span>
+			 = <span class="const-default"> 'samurai.sipgate.net'</span>
+			(line <span class="line-number">50</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constport" id="port"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">port</span>
+			 = <span class="const-default"> '443'</span>
+			(line <span class="line-number">51</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constprot" id="prot"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">prot</span>
+			 = <span class="const-default"> 'https'</span>
+			(line <span class="line-number">49</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constRPC_path" id="RPC_path"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">RPC_path</span>
+			 = <span class="const-default"> '/RPC2'</span>
+			(line <span class="line-number">52</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+						
+		</div>
+	</div>
+	
+	<p class="notes" id="credit">
+		Documentation generated on Wed, 05 Sep 2007 15:05:21 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.0</a>
+	</p>
+	</div></body>
+</html>
