@@ -29,7 +29,3 @@ class sipgateAPI_Server_Exception extends sipgateAPI_Exception
 {
 	
 }
-
-
-
-?>
