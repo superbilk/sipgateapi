@@ -149,6 +149,92 @@ class sipgateAPI
     }
 
 
+    /**
+     * sending SMS
+     *
+     * Sending a text message to a (mobile) phone. Message will be cut off after 160 characters
+     *
+     * @param string $to mobile number, example: 491701234567
+     * @param string $message cut off after 160 chars
+     * @param string $time unix timestamp in UTC
+     *
+     * @return
+     */
+    public function sendSMS($to, $message, $time = NULL)
+    {
+        $number = self::SIP_URI_prefix . $to . self::SIP_URI_host;
+
+        $message = substr($message, 0, 160);
+
+        $this->samurai_SessionInitiate(NULL, $number, "text", $message, $time);
+    }
+
+
+
+    /**
+     * implements <i>samurai.SessionInitiate</i>
+     *
+     *@param string $LocalUri as SIP-URI
+     *@param string $RemoteUri as SIP-URI
+     *@param string $TOS Type of service as defined in $availableTOS
+     *@param string $Content depends on TOS
+     *@param dateTime $schedule as unix timestamp
+     *
+     * @return string SessionID, if available
+     *
+     * @throws sipgateAPI_Server_Exception on Server responses != 200 OK
+     */
+    protected function samurai_SessionInitiate($LocalUri, $RemoteUri, $TOS, $Content, $Schedule = NULL)
+    {
+        if ( isset($LocalUri) ) {
+            $val_a["LocalUri"] = new xmlrpcval($LocalUri);
+        };
+
+        if ( isset($RemoteUri) ) {
+            $val_a["RemoteUri"] = new xmlrpcval($RemoteUri);
+        }
+        else {
+            throw new sipgateAPI_Exception("No RemoteUri");
+        };
+
+        if ( isset($TOS) ) {
+            $val_a["TOS"] = new xmlrpcval($TOS);
+        }
+        else {
+            throw new sipgateAPI_Exception("No valid TOS");
+        };
+
+        if ( isset($Content) ) {
+            $val_a["Content"] = new xmlrpcval($Content);
+        };
+
+        if ( isset($Schedule) ) {
+            $val_a["Schedule"] = new xmlrpcval(iso8601_encode($Schedule), "dateTime.iso8601");
+        };
+
+        $val_s = new xmlrpcval();
+        $val_s->addStruct($val_a);
+        $v = array();
+        $v[] = $val_s;
+
+        // create message
+        $m = new xmlrpcmsg('samurai.SessionInitiate', $v);
+
+        // send message
+        $r = $this->client->send($m);
+
+
+        if (!$r->faultCode()) {
+            $php_r = php_xmlrpc_decode($r->value());
+            return $php_r["SessionID"];
+        }
+        else {
+            throw new sipgateAPI_Server_Exception($r->faultString(), $r->faultCode());
+        }
+    }
+
+
+
 
 //
 //
@@ -555,73 +641,6 @@ class sipgateAPI
 //
 //
 //
-//    /**
-//     * implements <i>samurai.SessionInitiate</i>
-//     *
-//     *@param string $LocalUri as SIP-URI
-//     *@param string $RemoteUri as SIP-URI
-//     *@param string $TOS Type of service as defined in $availableTOS
-//     *@param string $Content depends on TOS
-//     *@param dateTime $schedule as unix timestamp
-//     *
-//     * @return string SessionID, if available
-//     *
-//     * @throws sipgateAPI_Server_Exception on Server responses != 200 OK
-//     */
-//    public function samurai_SessionInitiate($LocalUri, $RemoteUri, $TOS, $Content, $Schedule = NULL)
-//    {
-//        // checks if method is supported
-//        if ( ! $this->methodSupported(__FUNCTION__) ) {
-//            throw new sipgateAPI_Exception("Method not supported", 400);
-//        }
-//
-//        if ( isset($LocalUri) ) {
-//            $val_a["LocalUri"] = new xmlrpcval($LocalUri);
-//        };
-//
-//        if ( isset($RemoteUri) ) {
-//            $val_a["RemoteUri"] = new xmlrpcval($RemoteUri);
-//        }
-//        else {
-//            throw new sipgateAPI_Exception("No RemoteUri");
-//        };
-//
-//        if ( isset($TOS) AND $this->tosSupported($TOS) ) {
-//            $val_a["TOS"] = new xmlrpcval($TOS);
-//        }
-//        else {
-//            throw new sipgateAPI_Exception("No valid TOS");
-//        };
-//
-//        if ( isset($Content) ) {
-//            $val_a["Content"] = new xmlrpcval($Content);
-//        };
-//
-//        if ( isset($Schedule) ) {
-//            $val_a["Schedule"] = new xmlrpcval(iso8601_encode($Schedule), "dateTime.iso8601");
-//        };
-//
-//        $val_s = new xmlrpcval();
-//        $val_s->addStruct($val_a);
-//        $v = array();
-//        $v[] = $val_s;
-//
-//        // create message
-//        $m = new xmlrpcmsg('samurai.SessionInitiate', $v);
-//
-//        // send SMS
-//        $r = $this->client->send($m);
-//
-//
-//        if (!$r->faultCode()) {
-//            $php_r = php_xmlrpc_decode($r->value());
-//            return $php_r["SessionID"];
-//        }
-//        else {
-//            throw new sipgateAPI_Server_Exception($r->faultString(), $r->faultCode());
-//        }
-//    }
-//
 //
 //
 //
@@ -769,26 +788,6 @@ class sipgateAPI
 //    }
 //
 //
-//
-//    /**
-//     * sending SMS
-//     *
-//     * Sending a text message to a (mobile) phone. Message will be cut off after 160 characters
-//     *
-//     * @param string $to mobile number, example: 491701234567
-//     * @param string $text cut off after 160 chars
-//     * @param string $time unix timestamp in UTC
-//     *
-//     * @return
-//     */
-//    public function sendSMS($to, $text, $time = NULL)
-//    {
-//        $number = self::SIP_URI_prefix . $to . self::SIP_URI_host;
-//
-//        $text = substr($text, 0, 160);
-//
-//        $this->samurai_SessionInitiate(NULL, $number, "text", $text, $time);
-//    }
 //
 //
 //
