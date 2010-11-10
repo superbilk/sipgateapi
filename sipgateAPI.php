@@ -171,6 +171,44 @@ class sipgateAPI
 
 
 
+
+
+    /**
+     * sending a PDF file as fax
+     *
+     * @param string $to fax number, example: 492111234567
+     * @param string $file
+     * @param string $time unix timestamp in UTC
+     *
+     * @return string Returns SessionID
+     */
+    public function sendFAX($faxnumber, $file, $time = NULL)
+    {
+        $number = self::SIP_URI_prefix . $faxnumber . self::SIP_URI_host;
+
+        $file = realpath($file);
+
+        if ( !file_exists($file) ) {
+            throw new Exception("PDF file does not exist");
+        }
+        elseif ( strtolower(pathinfo($file, PATHINFO_EXTENSION)) != 'pdf' ) {
+            throw new Exception("No PDF file");
+        };
+
+
+        $pdf_base64 = base64_encode(file_get_contents($file));
+        $r = $this->samurai_SessionInitiate(NULL, $number, "fax", $pdf_base64, $time);
+
+        return $r;
+    }
+
+
+
+
+
+
+
+
     /**
      * implements <i>samurai.SessionInitiate</i>
      *
@@ -788,38 +826,6 @@ class sipgateAPI
 //    }
 //
 //
-//
-//
-//
-//
-//    /**
-//     * sending a PDF file as fax
-//     *
-//     * @param string $to fax number, example: 492111234567
-//     * @param string $file
-//     * @param string $time unix timestamp in UTC
-//     *
-//     * @return string Returns SessionID
-//     */
-//    public function sendFAX($to, $file, $time = NULL)
-//    {
-//        $number = self::SIP_URI_prefix . $to . self::SIP_URI_host;
-//
-//        $file = realpath($file);
-//
-//        if ( !file_exists($file) ) {
-//            throw new Exception("PDF file does not exist");
-//        }
-//        elseif ( strtolower(pathinfo($file, PATHINFO_EXTENSION)) != 'pdf' ) {
-//            throw new Exception("No PDF file");
-//        };
-//
-//
-//        $pdf_base64 = base64_encode(file_get_contents($file));
-//        $r = $this->samurai_SessionInitiate(NULL, $number, "fax", $pdf_base64, $time);
-//
-//        return $r;
-//    }
 //
 //
 //

@@ -12,13 +12,19 @@ require_once ('../sipgateAPI.php');
  */
 
 $username = "";
-$password = "
-";
+$password = "";
+
 $mobilenumber = "";
 $message = "";
+
+$faxnumber = "";
+$file = "./test.pdf";
 
 $myAPI = new sipgateAPI($username, $password);
 $r = $myAPI->getBalance();
 print_r($r);
 
 $myAPI->sendSMS($mobilenumber, $message);
+
+$r = $myAPI->sendFax($faxnumber, $file);
+print_r($r);
