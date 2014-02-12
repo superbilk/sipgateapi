@@ -35,9 +35,9 @@ require_once 'sipgateAPI_Exception.php';
  */
 class sipgateAPI
 {
-    const ClientVersion	= 0.1;
-    const ClientName	= 'sipgateAPI with PHP';
-    const ClientVendor	= 'Christian Schmidt';
+    const ClientVersion = 0.1;
+    const ClientName = 'sipgateAPI with PHP';
+    const ClientVendor = 'Christian Schmidt';
 
     const SIP_URI_prefix = 'sip:';
     const SIP_URI_host = '@sipgate.de';
@@ -56,21 +56,19 @@ class sipgateAPI
     {
         // Check if xmlrpc is included
         if (!class_exists("xmlrpc_client")) {
-            throw new sipgateAPI_Exception ('You need "xmlrpc for PHP" - Please download at https://github.com/gggeek/phpxmlrpc/');
+            throw new sipgateAPI_Exception('You need "xmlrpc for PHP" - Please download at https://github.com/gggeek/phpxmlrpc/');
         };
 
         $this->debug = $debug;
 
-        if ( !empty($username) AND !empty($password) ) {
+        if (!empty($username) AND !empty($password)) {
             $this->getClient($username, $password);
-        }
-        else {
+        } else {
             throw new sipgateAPI_Exception('Provide valid credentials');
         };
 
         return $this->client;
     }
-
 
 
     /**
@@ -88,10 +86,9 @@ class sipgateAPI
             // Build URL
             $this->url = "https://" . urlencode($username) . ":" . urlencode($password);
             if (self::isTeam($username)) {
-               $this->url .= "@api.sipgate.net:443/RPC2";
-
+                $this->url .= "@api.sipgate.net:443/RPC2";
             } else {
-               $this->url .= "@samurai.sipgate.net:443/RPC2";
+                $this->url .= "@samurai.sipgate.net:443/RPC2";
             }
 
             // create client
@@ -142,8 +139,7 @@ class sipgateAPI
             unset($php_r["StatusCode"]);
             unset($php_r["StatusString"]);
             return $php_r;
-        }
-        else {
+        } else {
             throw new sipgateAPI_Server_Exception($r->faultString(), $r->faultCode());
         }
     }
@@ -170,9 +166,6 @@ class sipgateAPI
     }
 
 
-
-
-
     /**
      * sending a PDF file as fax
      *
@@ -188,10 +181,9 @@ class sipgateAPI
 
         $file = realpath($file);
 
-        if ( !file_exists($file) ) {
+        if (!file_exists($file)) {
             throw new Exception("PDF file does not exist");
-        }
-        elseif ( strtolower(pathinfo($file, PATHINFO_EXTENSION)) != 'pdf' ) {
+        } elseif (strtolower(pathinfo($file, PATHINFO_EXTENSION)) != 'pdf') {
             throw new Exception("No PDF file");
         };
 
@@ -203,20 +195,14 @@ class sipgateAPI
     }
 
 
-
-
-
-
-
-
     /**
      * implements <i>samurai.SessionInitiate</i>
      *
-     *@param string $LocalUri as SIP-URI
-     *@param string $RemoteUri as SIP-URI
-     *@param string $TOS Type of service as defined in $availableTOS
-     *@param string $Content depends on TOS
-     *@param dateTime $schedule as unix timestamp
+     * @param string $LocalUri as SIP-URI
+     * @param string $RemoteUri as SIP-URI
+     * @param string $TOS Type of service as defined in $availableTOS
+     * @param string $Content depends on TOS
+     * @param dateTime $schedule as unix timestamp
      *
      * @return string SessionID, if available
      *
@@ -224,29 +210,27 @@ class sipgateAPI
      */
     protected function samurai_SessionInitiate($LocalUri, $RemoteUri, $TOS, $Content, $Schedule = NULL)
     {
-        if ( isset($LocalUri) ) {
+        if (isset($LocalUri)) {
             $val_a["LocalUri"] = new xmlrpcval($LocalUri);
         };
 
-        if ( isset($RemoteUri) ) {
+        if (isset($RemoteUri)) {
             $val_a["RemoteUri"] = new xmlrpcval($RemoteUri);
-        }
-        else {
+        } else {
             throw new sipgateAPI_Exception("No RemoteUri");
         };
 
-        if ( isset($TOS) ) {
+        if (isset($TOS)) {
             $val_a["TOS"] = new xmlrpcval($TOS);
-        }
-        else {
+        } else {
             throw new sipgateAPI_Exception("No valid TOS");
         };
 
-        if ( isset($Content) ) {
+        if (isset($Content)) {
             $val_a["Content"] = new xmlrpcval($Content);
         };
 
-        if ( isset($Schedule) ) {
+        if (isset($Schedule)) {
             $val_a["Schedule"] = new xmlrpcval(iso8601_encode($Schedule), "dateTime.iso8601");
         };
 
@@ -265,8 +249,7 @@ class sipgateAPI
         if (!$r->faultCode()) {
             $php_r = php_xmlrpc_decode($r->value());
             return $php_r["SessionID"];
-        }
-        else {
+        } else {
             throw new sipgateAPI_Server_Exception($r->faultString(), $r->faultCode());
         }
     }
