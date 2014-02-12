@@ -1,0 +1,3 @@
+[submodule "phpxmlrpc"]
+	path = phpxmlrpc
+	url = git@github.com:gggeek/phpxmlrpc.git

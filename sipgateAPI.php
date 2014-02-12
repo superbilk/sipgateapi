@@ -56,7 +56,7 @@ class sipgateAPI
     {
         // Check if xmlrpc is included
         if (!class_exists("xmlrpc_client")) {
-            throw new sipgateAPI_Exception ('You need "xmlrpc for PHP" - Please download at http://phpxmlrpc.sourceforge.net');
+            throw new sipgateAPI_Exception ('You need "xmlrpc for PHP" - Please download at https://github.com/gggeek/phpxmlrpc/');
         };
 
         $this->debug = $debug;

@@ -1,8 +1,10 @@
 <?php
 
-require_once ('../xmlrpc/lib/xmlrpc.inc');
+set_include_path(get_include_path() . PATH_SEPARATOR . '../phpxmlrpc/lib/');
+require_once( 'xmlrpc.inc' );
+require_once( 'xmlrpcs.inc' );
+require_once( 'xmlrpc_wrappers.inc' );
 require_once ('../sipgateAPI.php');
-
 
 /*
  * set your username and passwort
@@ -14,17 +16,17 @@ require_once ('../sipgateAPI.php');
 $username = "";
 $password = "";
 
-$mobilenumber = "";
-$message = "";
-
-$faxnumber = "";
-$file = "./test.pdf";
-
 $myAPI = new sipgateAPI($username, $password);
 $r = $myAPI->getBalance();
 print_r($r);
 
-$myAPI->sendSMS($mobilenumber, $message);
+//$mobilenumber = "";
+//$message = "";
 
-$r = $myAPI->sendFax($faxnumber, $file);
-print_r($r);
+//$faxnumber = "";
+//$file = "./test.pdf";
+
+//$myAPI->sendSMS($mobilenumber, $message);
+
+//$r = $myAPI->sendFax($faxnumber, $file);
+//print_r($r);
